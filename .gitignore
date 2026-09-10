@@ -1,0 +1,22 @@
+# Môi trường ảo
+vilaw-venv/
+venv/
+.env
+
+# Cache & Python bytecode
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Dữ liệu & Checkpoints nặng
+data/raw/
+vilaw-checkpoints/
+vilaw-sft/
+vilaw-dpo/
+vilaw-awq/
+*.gguf
+*.parquet
+
+# IDE
+.vscode/
+.idea/
