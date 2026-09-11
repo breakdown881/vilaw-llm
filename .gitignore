@@ -16,6 +16,8 @@ vilaw-dpo/
 vilaw-awq/
 *.gguf
 *.parquet
+vilaw-dpo-lora
+vilaw-sft-lora
 
 # IDE
 .vscode/

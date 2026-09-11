@@ -1,0 +1,52 @@
+# ==============================================================================
+# DOCKER COMPOSE ORCHESTRATION: VILAW-LLM PRODUCTION CLUSTER
+# Bao gồm 2 microservices:
+# 1. vilaw-api: FastAPI Backend (Guardrails + SSE Streaming)
+# 2. vilaw-engine: High-throughput Inference Server (vLLM / Ollama)
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  # ----------------------------------------------------------------------------
+  # SERVICE 1: FASTAPI BACKEND (CỔNG TIẾP NHẬN BẢO MẬT & API)
+  # ----------------------------------------------------------------------------
+  vilaw-api:
+    container_name: vilaw-api
+    # TODO 1: Cấu hình build image từ Dockerfile hiện tại
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    # TODO 2: Map cổng 8000 của host ra cổng 8000 của container
+    ports:
+      - "8000:8000"
+
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ENGINE_HOST=vilaw-engine
+      - ENGINE_PORT=8001
+    
+    # TODO 3: Thiết lập depends_on để vilaw-api chỉ khởi động sau khi vilaw-engine sẵn sàng
+    depends_on:
+      - vilaw-engine
+    
+    restart: unless-stopped
+
+  # ----------------------------------------------------------------------------
+  # SERVICE 2: INFERENCE ENGINE (vLLM / OLLAMA GPU ACCELERATED)
+  # ----------------------------------------------------------------------------
+  vilaw-engine:
+    container_name: vilaw-engine
+    # TODO 4: Sử dụng image vLLM chính thức từ Docker Hub
+    image: vllm/vllm-openai:latest
+    
+    # TODO 5: Map cổng 8001 của host vào cổng 8000 của vLLM engine
+    ports:
+      - "8001:8000"
+
+    # TODO 6: Mount thư mục model adapter vilaw-dpo-lora vào container
+    volumes:
+      - ./vilaw-dpo-lora:/models/vilaw-dpo-lora:ro
+
+    restart: unless-stopped
