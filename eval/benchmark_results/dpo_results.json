@@ -1,0 +1,83 @@
+{
+  "model_name": "vilaw-llm-dpo",
+  "total_test_cases": 5,
+  "average_score_out_of_10": 9.1,
+  "hallucination_rate": "0.0%",
+  "detailed_results": [
+    {
+      "id": "LEGAL_001",
+      "category": "Luật Dân sự",
+      "question": "Thời hiệu khởi kiện để yêu cầu Tòa án giải quyết tranh chấp hợp đồng dân sự là bao lâu kể từ ngày người có quyền yêu cầu biết hoặc phải biết quyền, lợi ích hợp pháp của mình bị xâm phạm?",
+      "ground_truth": "Điều 429 Bộ luật Dân sự 2015 - Thời hiệu khởi kiện yêu cầu giải quyết tranh chấp hợp đồng là 03 năm theo quy định tại Điều 429 Bộ luật Dân sự 2015.",
+      "model_answer": "Theo quy định tại Điều 429 Bộ luật Dân sự 2015, thời hiệu khởi kiện để yêu cầu Tòa án giải quyết tranh chấp hợp đồng là 03 năm kể từ ngày người có quyền yêu cầu biết hoặc phải biết quyền, lợi ích hợp pháp của mình bị xâm phạm.",
+      "evaluation": {
+        "citation_score": 4,
+        "reasoning_score": 3,
+        "advice_score": 3,
+        "total_score": 10,
+        "is_hallucination": false,
+        "critique": "Trích dẫn đúng Điều 429 BLDS 2015, lập luận chính xác và đưa ra kết luận rõ ràng về thời hiệu 03 năm, không có sai lệch."
+      }
+    },
+    {
+      "id": "LEGAL_002",
+      "category": "Luật Thương mại",
+      "question": "Mức phạt vi phạm nghĩa vụ hợp đồng hoặc tổng mức phạt đối với nhiều vi phạm do các bên thoả thuận trong hợp đồng thương mại không được vượt quá bao nhiêu phần trăm giá trị phần nghĩa vụ hợp đồng bị vi phạm?",
+      "ground_truth": "Điều 301 Luật Thương mại 2005 - Mức phạt vi phạm không được vượt quá 8% giá trị phần nghĩa vụ hợp đồng bị vi phạm theo Điều 301 Luật Thương mại 2005 (trừ trường hợp giám định sai).",
+      "model_answer": "Căn cứ Điều 301 Luật Thương mại 2005, mức phạt vi phạm nghĩa vụ hợp đồng hoặc tổng mức phạt đối với nhiều vi phạm do các bên thoả thuận không được vượt quá 8% giá trị phần nghĩa vụ bị vi phạm.",
+      "evaluation": {
+        "citation_score": 3.5,
+        "reasoning_score": 2.5,
+        "advice_score": 2.5,
+        "total_score": 8.5,
+        "is_hallucination": false,
+        "critique": "Trích dẫn đúng Điều 301 Luật Thương mại 2005 và mức 8%, nhưng chưa nhắc tới ngoại lệ 'trừ trường hợp giám định sai'. Lập luận ngắn gọn, đúng luật; đưa kết luận hữu ích về mức phạt."
+      }
+    },
+    {
+      "id": "LEGAL_003",
+      "category": "Luật Doanh nghiệp",
+      "question": "Doanh nghiệp tư nhân có được quyền phát hành bất kỳ loại chứng khoán nào trên thị trường chứng khoán không?",
+      "ground_truth": "Khoản 2 Điều 188 Luật Doanh nghiệp 2020 - Doanh nghiệp tư nhân không được phát hành bất kỳ loại chứng khoán nào theo quy định tại Khoản 2 Điều 188 Luật Doanh nghiệp 2020.",
+      "model_answer": "Theo quy định tại Khoản 2 Điều 188 Luật Doanh nghiệp 2020, doanh nghiệp tư nhân không được phát hành bất kỳ loại chứng khoán nào trên thị trường chứng khoán.",
+      "evaluation": {
+        "citation_score": 4,
+        "reasoning_score": 3,
+        "advice_score": 3,
+        "total_score": 10,
+        "is_hallucination": false,
+        "critique": "Trích dẫn đúng Điều 188, Khoản 2; lập luận logic, đưa ra kết luận rõ ràng; không có sai lệch hay bịa đặt."
+      }
+    },
+    {
+      "id": "LEGAL_004",
+      "category": "Luật Lao động",
+      "question": "Người lao động làm việc vào ban đêm thì được trả thêm ít nhất bao nhiêu phần trăm tiền lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc của ngày làm việc bình thường?",
+      "ground_truth": "Khoản 2 Điều 98 Bộ luật Lao động 2019 - Người lao động làm việc vào ban đêm được trả thêm ít nhất 30% tiền lương theo Khoản 2 Điều 98 Bộ luật Lao động 2019.",
+      "model_answer": "Theo Khoản 2 Điều 98 Bộ luật Lao động 2019, người lao động làm việc vào ban đêm thì được trả thêm ít nhất 30% tiền lương tính theo đơn giá tiền lương của ngày làm việc bình thường.",
+      "evaluation": {
+        "citation_score": 3.5,
+        "reasoning_score": 3,
+        "advice_score": 3,
+        "total_score": 9.5,
+        "is_hallucination": false,
+        "critique": "Trích dẫn đúng Điều 98 khoản 2, nhưng chỉ nhắc đến đơn giá tiền lương, chưa đề cập tới tiền lương thực trả; lập luận và khuyến nghị rõ ràng, không có sai lệch."
+      }
+    },
+    {
+      "id": "LEGAL_005",
+      "category": "Luật Đấu thầu",
+      "question": "Trong trường hợp nào gói thầu mua sắm hàng hóa được áp dụng hình thức chỉ định thầu theo quy định của Luật Đấu thầu?",
+      "ground_truth": "Điều 23 Luật Đấu thầu 2023 - Được áp dụng chỉ định thầu trong các trường hợp cấp bách, bí mật nhà nước hoặc hạn mức theo quy định tại Điều 23 Luật Đấu thầu 2023.",
+      "model_answer": "Theo Điều 23 Luật Đấu thầu 2023, hình thức chỉ định thầu được áp dụng trong các trường hợp cấp bách để khắc phục thiên tai, dịch bệnh hoặc gói thầu bí mật nhà nước.",
+      "evaluation": {
+        "citation_score": 3,
+        "reasoning_score": 2.5,
+        "advice_score": 2,
+        "total_score": 7.5,
+        "is_hallucination": false,
+        "critique": "Trích dẫn đúng Điều 23 và Luật Đấu thầu nhưng chưa đề cập đến trường hợp hạn mức; lập luận đơn giản, không sâu sắc; đáp án cung cấp thông tin cần thiết nhưng chưa đầy đủ, không có khuyến nghị thêm."
+      }
+    }
+  ]
+}

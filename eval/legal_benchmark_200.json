@@ -1,0 +1,37 @@
+[
+  {
+    "id": "LEGAL_001",
+    "category": "Luật Dân sự",
+    "question": "Thời hiệu khởi kiện để yêu cầu Tòa án giải quyết tranh chấp hợp đồng dân sự là bao lâu kể từ ngày người có quyền yêu cầu biết hoặc phải biết quyền, lợi ích hợp pháp của mình bị xâm phạm?",
+    "ground_truth_law": "Điều 429 Bộ luật Dân sự 2015",
+    "expected_answer": "Thời hiệu khởi kiện yêu cầu giải quyết tranh chấp hợp đồng là 03 năm theo quy định tại Điều 429 Bộ luật Dân sự 2015."
+  },
+  {
+    "id": "LEGAL_002",
+    "category": "Luật Thương mại",
+    "question": "Mức phạt vi phạm nghĩa vụ hợp đồng hoặc tổng mức phạt đối với nhiều vi phạm do các bên thoả thuận trong hợp đồng thương mại không được vượt quá bao nhiêu phần trăm giá trị phần nghĩa vụ hợp đồng bị vi phạm?",
+    "ground_truth_law": "Điều 301 Luật Thương mại 2005",
+    "expected_answer": "Mức phạt vi phạm không được vượt quá 8% giá trị phần nghĩa vụ hợp đồng bị vi phạm theo Điều 301 Luật Thương mại 2005 (trừ trường hợp giám định sai)."
+  },
+  {
+    "id": "LEGAL_003",
+    "category": "Luật Doanh nghiệp",
+    "question": "Doanh nghiệp tư nhân có được quyền phát hành bất kỳ loại chứng khoán nào trên thị trường chứng khoán không?",
+    "ground_truth_law": "Khoản 2 Điều 188 Luật Doanh nghiệp 2020",
+    "expected_answer": "Doanh nghiệp tư nhân không được phát hành bất kỳ loại chứng khoán nào theo quy định tại Khoản 2 Điều 188 Luật Doanh nghiệp 2020."
+  },
+  {
+    "id": "LEGAL_004",
+    "category": "Luật Lao động",
+    "question": "Người lao động làm việc vào ban đêm thì được trả thêm ít nhất bao nhiêu phần trăm tiền lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc của ngày làm việc bình thường?",
+    "ground_truth_law": "Khoản 2 Điều 98 Bộ luật Lao động 2019",
+    "expected_answer": "Người lao động làm việc vào ban đêm được trả thêm ít nhất 30% tiền lương theo Khoản 2 Điều 98 Bộ luật Lao động 2019."
+  },
+  {
+    "id": "LEGAL_005",
+    "category": "Luật Đấu thầu",
+    "question": "Trong trường hợp nào gói thầu mua sắm hàng hóa được áp dụng hình thức chỉ định thầu theo quy định của Luật Đấu thầu?",
+    "ground_truth_law": "Điều 23 Luật Đấu thầu 2023",
+    "expected_answer": "Được áp dụng chỉ định thầu trong các trường hợp cấp bách, bí mật nhà nước hoặc hạn mức theo quy định tại Điều 23 Luật Đấu thầu 2023."
+  }
+]
